@@ -7,9 +7,11 @@ import CollaborationCursor from "@tiptap/extension-collaboration-cursor";
 import { WebrtcProvider } from "y-webrtc";
 import StarterKit from "@tiptap/starter-kit";
 const doc = new Y.Doc();
+// we used this for Collaboration
 const provider = new WebrtcProvider("text-editor",doc);
 const editor= useEditor({
   content:"<p>Hello world!</p>",
+  //  here we add  Collaboration extension
   extensions: [StarterKit, 
   Collaboration.configure({
 document: doc,
